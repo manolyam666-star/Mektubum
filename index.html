@@ -1,0 +1,132 @@
+<!DOCTYPE html> 
+<html lang="tr"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Sana Bir Mektubum Var</title> 
+    <style> 
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(120deg, #f7efe5, #fdf6f0); 
+            font-family: "Georgia", serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+        } 
+ 
+        .letter { 
+            background-color: #ffffff; 
+            max-width: 650px; 
+            padding: 45px; 
+            border-radius: 12px; 
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); 
+            animation: fadeIn 2s ease; 
+        } 
+ 
+        h1 { 
+            text-align: center; 
+            font-weight: normal; 
+            margin-bottom: 30px; 
+        } 
+ 
+        p { 
+            font-size: 16.5px; 
+            line-height: 1.9; 
+            margin-bottom: 18px; 
+        } 
+ 
+        .signature { 
+            margin-top: 40px; 
+            text-align: right; 
+            font-style: italic; 
+            font-size: 15px; 
+            color: #444; 
+        } 
+ 
+        .from { 
+            margin-top: 12px; 
+            font-size: 14px; 
+            font-style: italic; 
+            color: #a35c6d; 
+        } 
+ 
+        /* Kalp scroll */ 
+        .heart-scroll { 
+            position: fixed; 
+            bottom: 20px; 
+            right: 25px; 
+            font-size: 22px; 
+            color: #c94b6a; 
+            opacity: 0.6; 
+            transition: transform 0.2s ease, opacity 0.2s ease; 
+            pointer-events: none; 
+        } 
+ 
+        @keyframes fadeIn { 
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            } 
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            } 
+        } 
+    </style> 
+</head> 
+<body> 
+ 
+<div class="letter"> 
+    <h1>Balımm, bir tanemm;</h1> 
+ 
+    <p> 
+        Sen hayatıma girdiğinden beri "iyi ki" dedim, hiç aksini söylediğim olmadı. 
+        Belki bazı yönlerimiz dolayısıyla inatlaşıyoruz, belki bazen bazı şeyleri 
+        zorlaştırıyoruz ama her şeye rağmen senin her detayını seviyorum, 
+        bazen sevmediğimi söylesem bile onlar seni sen yapan şeyler ve seni sen 
+        yapan her şeyi seviyorum. 
+    </p> 
+ 
+    <p> 
+        Her sorun yaşadığımızda nefesim kesiliyor, her suratının asılışında 
+        hayatım renksizleşiyor. Her zaman yüzünün ve en önemlisi olan içinin 
+        gülmesini temenni ediyorum. 
+    </p> 
+ 
+    <p> 
+        Hiç koymayalım olur mu, inşallah kaderimiz de bizi hiçbir zaman ayırmaz. 
+        Seni çookkk seviyorumm. 
+    </p> 
+ 
+    <p> 
+        Umarım ki birlikte mussmustlu, huzurluu, sağlıklııı, 
+        çookk güzel bir yıl geçiririzz ♡ 
+    </p> 
+ 
+    <div class="signature"> 
+        — Seni çok seven<br> 
+        bir tanen 
+�
+�
+ 
+        <div class="from">Amine’den</div> 
+    </div> 
+</div> 
+ 
+<div class="heart-scroll">♡</div> 
+ 
+<script> 
+    const heart = document.querySelector('.heart-scroll'); 
+ 
+    window.addEventListener('scroll', () => { 
+        const scrollY = window.scrollY; 
+        const moveUp = Math.min(scrollY / 10, 30); 
+ 
+        heart.style.transform = `translateY(${-moveUp}px) scale(${1 + scrollY / 2000})`; 
+        heart.style.opacity = Math.min(0.9, 0.6 + scrollY / 2000); 
+    }); 
+</script> 
+ 
+</body> 
+</html> 
